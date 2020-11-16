@@ -861,7 +861,7 @@ sleep(1);
 }
 
 echo " {$yellow2}Ϟ {$putih2}Membuka Peti {$red2}=> {$green2}{$j_list->data->treasureChest[1]->type} {$yellow2}Ϟ\n";
-while($j_list->data->treasureChest[1]->num){
+while($j_list->data->treasureChest[1]->num != 0){
 if ($j_list->data->treasureChest[1]->num != 0){
   $dt_open = array("type" => "{$j_list->data->treasureChest[1]->type}","userid" => "{$userid}","token" => "{$token}");
   $js_open = json_encode($dt_open);
@@ -881,7 +881,7 @@ if ($j_list->data->treasureChest[1]->num != 0){
 }
 
 echo " {$yellow2}Ϟ {$putih2}Membuka Peti {$red2}=> {$green2}{$j_list->data->treasureChest[2]->type} {$yellow2}Ϟ\n";
-while($j_list->data->treasureChest[2]->num){
+while($j_list->data->treasureChest[2]->num != 0){
 if ($j_list->data->treasureChest[2]->num != 0){
   $dt_open = array("type" => "{$j_list->data->treasureChest[2]->type}","userid" => "{$userid}","token" => "{$token}");
   $js_open = json_encode($dt_open);
@@ -901,7 +901,7 @@ if ($j_list->data->treasureChest[2]->num != 0){
 }
 
 echo " {$yellow2}Ϟ {$putih2}Membuka Peti {$red2}=> {$green2}{$j_list->data->treasureChest[3]->type} {$yellow2}Ϟ\n";
-while($j_list->data->treasureChest[3]->num){
+while($j_list->data->treasureChest[3]->num != 0){
 if ($j_list->data->treasureChest[3]->num != 0){
   $dt_open = array("type" => "{$j_list->data->treasureChest[3]->type}","userid" => "{$userid}","token" => "{$token}");
   $js_open = json_encode($dt_open);
@@ -921,7 +921,7 @@ if ($j_list->data->treasureChest[3]->num != 0){
 }
 
 echo " {$yellow2}Ϟ {$putih2}Membuka Peti {$red2}=> {$green2}{$j_list->data->treasureChest[4]->type} {$yellow2}Ϟ\n";
-while($j_list->data->treasureChest[4]->num){
+while($j_list->data->treasureChest[4]->num != 0){
 if ($j_list->data->treasureChest[4]->num != 0){
   $dt_open = array("type" => "{$j_list->data->treasureChest[4]->type}","userid" => "{$userid}","token" => "{$token}");
   $js_open = json_encode($dt_open);
