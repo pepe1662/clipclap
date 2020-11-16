@@ -40,7 +40,7 @@ function curl_get($url,$headers){
   curl_setopt($ch, CURLOPT_URL, $url);
   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-   curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
   curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);    
   $result = curl_exec($ch);
   curl_close($ch);
@@ -68,7 +68,7 @@ $banner = "
 {$blue2} ~{$red2}~{$green2}~{$red2}~{$blue2}~{$green2}~{$blue2}~{$red2}~{$green2}~{$red2}~{$blue2}~{$green2}~{$blue2}~{$red2}~{$green2}~{$red2}~{$blue2}~{$green2}~{$blue2}~{$red2}~{$green2}~{$red2}~{$blue2}~{$green2}~{$blue2}~{$red2}~{$green2}~{$red2}~{$blue2}~{$green2}~{$blue2}~{$red2}~{$green2}~{$red2}~{$blue2}~{$green2}~{$blue2}~{$red2}~{$green2}~{$red2}~{$blue2}~{$green2}~{$blue2}~{$red2}~{$green2}~{$red2}~{$blue2}~{$green2}~{$blue2}~{$red2}~{$green2}~{$blue2}~{$red2}~\n";
 
 $spasi = " {$red2}=> ";
-
+$time = "185";
 
 echo os.system('clear');
 echo $banner;
@@ -126,7 +126,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[0]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[0]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -145,7 +145,7 @@ $r1 = json_decode($reward1);
 $msg1 = $r1->msg;
 if ($msg1 == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[1]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[1]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -164,7 +164,7 @@ $r2 = json_decode($reward2);
 $msg2 = $r2->msg;
 if ($msg2 == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[2]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[2]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -183,7 +183,7 @@ $r3 = json_decode($reward3);
 $msg3 = $r3->msg;
 if ($msg3 == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[3]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[3]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -202,7 +202,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[4]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[4]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -211,7 +211,6 @@ if ($msg == "Success"){
 }else{
   echo " {$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[4]->time} {$red2}=> {$putih2}Sudah Di Ambil !!!\n";
   sleep(1);
-}
 
 $dt_reward = array("rewardTime" => "{$j_rtimer->data->config->timerReward[5]->time}","articleTime" => "0","rewardType" => "{$j_rtimer->data->config->timerReward[5]->rewardType}","activeDay" => "{$activeDay}","videoTime" => "{$j_rtimer->data->config->timerReward[5]->time}","specific" => "false","userid" => "{$userid}","version" => "7","day" => "{$day}","token" => "{$token}");
 $js_reward = json_encode($dt_reward);
@@ -221,7 +220,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[5]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[5]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -240,7 +239,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[6]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[6]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -259,7 +258,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[7]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[7]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -278,7 +277,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[8]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[8]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -297,7 +296,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[9]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[9]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -316,7 +315,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[10]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[10]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -335,7 +334,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[11]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[11]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -354,7 +353,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[12]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[12]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -373,7 +372,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[13]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[13]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -392,7 +391,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[14]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[14]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -411,7 +410,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[15]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[15]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -430,7 +429,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[16]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[16]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -449,7 +448,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[17]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[17]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -468,7 +467,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[18]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[18]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -487,7 +486,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[19]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[19]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -506,7 +505,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[20]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[20]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -525,7 +524,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[21]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[21]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -544,7 +543,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[22]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[22]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -563,7 +562,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[23]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[23]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -582,7 +581,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[24]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[24]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -601,7 +600,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[25]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[25]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -620,7 +619,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[26]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[26]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -639,7 +638,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[27]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[27]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -658,7 +657,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[28]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[28]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -677,7 +676,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[29]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[29]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -696,7 +695,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[30]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[30]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -715,7 +714,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[31]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[31]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -734,7 +733,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[32]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[32]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -753,7 +752,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[33]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[33]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -772,7 +771,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[34]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[34]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -791,7 +790,7 @@ $r0 = json_decode($reward);
 $msg = $r0->msg;
 if ($msg == "Success"){
   echo " {$putih2}You Get {$red2}=> {$green2}{$j_rtimer->data->config->timerReward[35]->rewardType}".$spasi."{$putih2}Timer Reward {$green2}{$j_rtimer->data->config->timerReward[35]->time}\n";
-  for ($weth=302;$weth>0;$weth--){
+  for ($weth=$time;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
      echo "\r\r";
@@ -844,8 +843,8 @@ sleep(1);
 echo "\n"," {$lblue2}Ϟ {$green2}BOT KEUR GAWE !!! {$lblue2}Ϟ\n";
 echo "{$abu2} ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
 
-echo " Ϟ Membuka Peti => {$j_list->data->treasureChest[0]->type} Ϟ\n";
-while(True){
+echo " Ϟ {$putih2}Membuka Peti {$red2}=>=> {$green2}{$j_list->data->treasureChest[0]->type} Ϟ\n";
+while($j_list->data->treasureChest[0]->num != 0){
 if ($j_list->data->treasureChest[0]->num != 0){
   $dt_open = array("type" => "{$j_list->data->treasureChest[0]->type}","userid" => "{$userid}","token" => "{$token}");
   $js_open = json_encode($dt_open);
@@ -857,12 +856,11 @@ if ($j_list->data->treasureChest[0]->num != 0){
      echo "\r\r";
      sleep(1);
      }
-}else{
-  echo " Peti => {$j_list->data->treasureChest[0]->type} Kosong !!!\n";
-  continue;
-  sleep(1);
 }
+echo " {$putih2}Peti {$red2}=> {$green2}{$j_list->data->treasureChest[0]->type} {$putih2}Kosong !!!\n";
+sleep(1);
 }
+
 echo " Ϟ Membuka Peti => {$j_list->data->treasureChest[1]->type} Ϟ\n";
 while(True){
 if ($j_list->data->treasureChest[1]->num != 0){
@@ -942,14 +940,14 @@ if ($j_list->data->treasureChest[4]->num != 0){
   sleep(1);
 }
 }
-for ($weth=85985;$weth>0;$weth--){
+for ($weth=86400;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer 24 Jam >>> ".$weth." Seconds ";
      echo "\r\r";
      sleep(1);
      }
 }
-
+}
 /*
 $dt_list = array('finishCashOutGuide' => 'false','userid' => '{$userid}','token' => '{$token}');
 $js_list = json_encode($dt_list);
@@ -974,7 +972,7 @@ $day = $j_list
 
 
 
-/*
+
 $p = json_decode($dash);
 echo $note." {$yellow2}Your Point {$red2}==> {$green2}".$p->result[1]," Coins\n";
 sleep(1);
