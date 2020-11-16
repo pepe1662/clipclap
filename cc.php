@@ -839,8 +839,8 @@ echo " {$lblue2}[ ]{$yellow2}".$j_list->data->treasureChest[2]->type."    {$red2
 echo " {$lblue2}[ ]{$yellow2}".$j_list->data->treasureChest[3]->type."  {$red2}~> {$green2}".$j_list->data->treasureChest[3]->num."{$lblue2} \n";
 echo " {$lblue2}[ ]{$yellow2}".$j_list->data->treasureChest[4]->type." {$red2}~> {$green2}".$j_list->data->treasureChest[4]->num."{$lblue2} \n";
 sleep(1);
-echo "\n"," {$lblue2}Ϟ {$green2}BOT KEUR GAWE !!! {$lblue2}Ϟ\n";
-echo "{$abu2} ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
+echo "\n"," {$lblue2}Ϟ {$green2}BOT KEUR MUKAAN PETI !!! {$lblue2}Ϟ\n";
+echo "{$abu2} ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
 
 echo " {$yellow2}Ϟ {$putih2}Membuka Peti {$red2}=> {$green2}{$j_list->data->treasureChest[0]->type} {$yellow2}Ϟ\n";
 while($j_list->data->treasureChest[0]->num != 0){
@@ -911,14 +911,57 @@ while($j_list->data->treasureChest[4]->num != 0){
      sleep(1);
      }
 }
+echo os.system('clear');
+echo $banner;
+$head2 = array(
+  "Host: api.cc.lerjin.com",
+  "charset: UTF-8",
+  "device-type: 2",
+  "api-version: 2",
+  "external-version: 2.2.9",
+  "device: 10",
+  "version: 42",
+  "timezone: 7",
+  "lang: in",
+  "token: ".$token."",
+  "uuid: ".$uuid."",
+  "app-id: ClipClaps_gg",
+  "cache-control: no-cache",
+  "content-type: application/json; charset=UTF-8",
+  "user-agent: okhttp/4.2.1 1");
+$dtdash2 = array("userid" => "{$userid}","token" => "{$token}");
+$jsdash2 = json_encode($dtdash1);
+$dash2 = curl_post("https://api.cc.lerjin.com/user/self/info", $head2, $jsdash2);
+$j2 =json_decode($dash2);
+$nama2 = $j2->data->nickname;
+$koin2 = $j2->data->coins;
+$cash2 = $j2->data->cash;
+echo " {$putih2}Account {$red2}=> {$green2}".$nama2." {$red2}[ {$lblue2}{$userid} {$red2}]\n";
+echo " {$putih2}Balance {$red2}=> {$yellow2}[ ".$koin2." Coin ]{$green2}[ $ ".$cash1." ]\n";
+
+$dt_list2 = array("finishCashOutGuide" => "false","userid" => "{$userid}","token" => "{$token}");
+$js_list2 = json_encode($dt_list2);
+$list2 = curl_post("https://api.cc.lerjin.com/reward/list", $head2, $js_list2);
+$j_list2 = json_decode($list2);
+echo " {$lblue2}ϞϞ {$green2}TREASURE LIST {$lblue2}ϞϞ\n";
+echo " {$lblue2}[ ]{$yellow2}".$j_list2->data->treasureChest[0]->type."  {$red2}~> {$green2}".$j_list2->data->treasureChest[0]->num."{$lblue2} \n";
+echo " {$lblue2}[ ]{$yellow2}".$j_list2->data->treasureChest[1]->type."  {$red2}~> {$green2}".$j_list2->data->treasureChest[1]->num."{$lblue2} \n";
+echo " {$lblue2}[ ]{$yellow2}".$j_list2->data->treasureChest[2]->type."    {$red2}~> {$green2}".$j_list2->data->treasureChest[2]->num."{$lblue2} \n";
+echo " {$lblue2}[ ]{$yellow2}".$j_list2->data->treasureChest[3]->type."  {$red2}~> {$green2}".$j_list2->data->treasureChest[3]->num."{$lblue2} \n";
+echo " {$lblue2}[ ]{$yellow2}".$j_list2->data->treasureChest[4]->type." {$red2}~> {$green2}".$j_list2->data->treasureChest[4]->num."{$lblue2} \n";
+sleep(1);
+echo "\n"," {$lblue2}Ϟ {$green2}BOT KEUR ISTIRAHAT !!! {$lblue2}Ϟ\n";
+echo "{$abu2} ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
 for ($weth=85986;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer 24 Jam >>> ".$weth." Seconds ";
      echo "\r\r";
      sleep(1);
      }
+
 }
-}
+
+
 /*
 $dt_list = array('finishCashOutGuide' => 'false','userid' => '{$userid}','token' => '{$token}');
 $js_list = json_encode($dt_list);
