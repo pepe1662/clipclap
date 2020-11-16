@@ -838,18 +838,17 @@ echo " {$lblue2}[ ]{$yellow2}".$j_list->data->treasureChest[1]->type."  {$red2}~
 echo " {$lblue2}[ ]{$yellow2}".$j_list->data->treasureChest[2]->type."    {$red2}~> {$green2}".$j_list->data->treasureChest[2]->num."{$lblue2} \n";
 echo " {$lblue2}[ ]{$yellow2}".$j_list->data->treasureChest[3]->type."  {$red2}~> {$green2}".$j_list->data->treasureChest[3]->num."{$lblue2} \n";
 echo " {$lblue2}[ ]{$yellow2}".$j_list->data->treasureChest[4]->type." {$red2}~> {$green2}".$j_list->data->treasureChest[4]->num."{$lblue2} \n";
-echo "\n";
 sleep(1);
 echo "\n"," {$lblue2}Ϟ {$green2}BOT KEUR GAWE !!! {$lblue2}Ϟ\n";
 echo "{$abu2} ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
 
-echo " Ϟ {$putih2}Membuka Peti {$red2}=>=> {$green2}{$j_list->data->treasureChest[0]->type} Ϟ\n";
+echo " {$yellow2}Ϟ {$putih2}Membuka Peti {$red2}=> {$green2}{$j_list->data->treasureChest[0]->type} {$yellow2}Ϟ\n";
 while($j_list->data->treasureChest[0]->num != 0){
 if ($j_list->data->treasureChest[0]->num != 0){
   $dt_open = array("type" => "{$j_list->data->treasureChest[0]->type}","userid" => "{$userid}","token" => "{$token}");
   $js_open = json_encode($dt_open);
   $open = curl_post("https://api.cc.lerjin.com/reward/treasureChest/open", $head, $js_open);
-  echo $open."\n";
+  echo " {$green2}".$open."\n";
   for ($weth=5;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
@@ -861,13 +860,13 @@ echo " {$putih2}Peti {$red2}=> {$green2}{$j_list->data->treasureChest[0]->type} 
 sleep(1);
 }
 
-echo " Ϟ Membuka Peti => {$j_list->data->treasureChest[1]->type} Ϟ\n";
-while(True){
+echo " {$yellow2}Ϟ {$putih2}Membuka Peti {$red2}=> {$green2}{$j_list->data->treasureChest[1]->type} {$yellow2}Ϟ\n";
+while($j_list->data->treasureChest[1]->num){
 if ($j_list->data->treasureChest[1]->num != 0){
   $dt_open = array("type" => "{$j_list->data->treasureChest[1]->type}","userid" => "{$userid}","token" => "{$token}");
   $js_open = json_encode($dt_open);
   $open = curl_post("https://api.cc.lerjin.com/reward/treasureChest/open", $head, $js_open);
-  echo $open."\n";
+  echo " {$green2}".$open."\n";
   for ($weth=5;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
@@ -881,13 +880,13 @@ if ($j_list->data->treasureChest[1]->num != 0){
 }
 }
 
-echo " Ϟ Membuka Peti => {$j_list->data->treasureChest[2]->type} Ϟ\n";
-while(True){
+echo " {$yellow2}Ϟ {$putih2}Membuka Peti {$red2}=> {$green2}{$j_list->data->treasureChest[2]->type} {$yellow2}Ϟ\n";
+while($j_list->data->treasureChest[2]->num){
 if ($j_list->data->treasureChest[2]->num != 0){
   $dt_open = array("type" => "{$j_list->data->treasureChest[2]->type}","userid" => "{$userid}","token" => "{$token}");
   $js_open = json_encode($dt_open);
   $open = curl_post("https://api.cc.lerjin.com/reward/treasureChest/open", $head, $js_open);
-  echo $open."\n";
+  echo " {$green2}".$open."\n";
   for ($weth=5;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
@@ -901,13 +900,13 @@ if ($j_list->data->treasureChest[2]->num != 0){
 }
 }
 
-echo " Ϟ Membuka Peti => {$j_list->data->treasureChest[3]->type} Ϟ\n";
-while(True){
+echo " {$yellow2}Ϟ {$putih2}Membuka Peti {$red2}=> {$green2}{$j_list->data->treasureChest[3]->type} {$yellow2}Ϟ\n";
+while($j_list->data->treasureChest[3]->num){
 if ($j_list->data->treasureChest[3]->num != 0){
   $dt_open = array("type" => "{$j_list->data->treasureChest[3]->type}","userid" => "{$userid}","token" => "{$token}");
   $js_open = json_encode($dt_open);
   $open = curl_post("https://api.cc.lerjin.com/reward/treasureChest/open", $head, $js_open);
-  echo $open."\n";
+  echo " {$green2}".$open."\n";
   for ($weth=5;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
@@ -921,13 +920,13 @@ if ($j_list->data->treasureChest[3]->num != 0){
 }
 }
 
-echo " Ϟ Membuka Peti => {$j_list->data->treasureChest[4]->type} Ϟ\n";
-while(True){
+echo " {$yellow2}Ϟ {$putih2}Membuka Peti {$red2}=> {$green2}{$j_list->data->treasureChest[4]->type} {$yellow2}Ϟ\n";
+while($j_list->data->treasureChest[4]->num){
 if ($j_list->data->treasureChest[4]->num != 0){
   $dt_open = array("type" => "{$j_list->data->treasureChest[4]->type}","userid" => "{$userid}","token" => "{$token}");
   $js_open = json_encode($dt_open);
   $open = curl_post("https://api.cc.lerjin.com/reward/treasureChest/open", $head, $js_open);
-  echo $open."\n";
+  echo " {$green2}".$open."\n";
   for ($weth=5;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer >>> ".$weth." Seconds ";
@@ -940,7 +939,7 @@ if ($j_list->data->treasureChest[4]->num != 0){
   sleep(1);
 }
 }
-for ($weth=86400;$weth>0;$weth--){
+for ($weth=85986;$weth>0;$weth--){
      echo "\r \r";
      echo $titik4."\r<<< Timer 24 Jam >>> ".$weth." Seconds ";
      echo "\r\r";
